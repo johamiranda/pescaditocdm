@@ -1,0 +1,55 @@
+.banner {
+	position: relative;
+	width: 100%;
+	margin: auto; 
+	background-size: cover;
+	background-position: center;
+	height: calc(100vh - 85px - 50px);
+	overflow: auto;
+	animation: banner 10s infinite;
+	animation-direction: alternate;
+}
+
+@keyframes banner {
+	0%, 30% {
+		background-image: url(../media/banner1.jpg);
+		opacity: 1;
+	}
+	31%, 34% {
+		opacity: 0.1;
+	}
+	35%, 65% {
+		background-image: url(../media/banner2.jpg);
+		opacity: 1;
+	}
+	66%, 69% {
+		opacity: 0.1;
+	}
+	70%, 100% {
+		background-image: url(../media/banner3.jpg);
+		opacity: 1;
+	}
+}
+
+.banner:before {
+	content: "";
+	position: absolute;
+	background-color: #000;
+	opacity: 0.3;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.bannerinfo {
+	font-family: "Notable";
+	text-align: center;
+	color: white;
+	font-size: 55px;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+	text-shadow:5px 5px 10px #010101; 
+	
+}

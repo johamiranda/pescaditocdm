@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OPINÁ</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="css/estilosCSS.css">
+	<link href="https://fonts.googleapis.com/css2?family=League+Script&family=Notable&family=Roboto:wght@100;300;900&display=swap" rel="stylesheet">
+</head>
+<div class="contenedor">
+	<header>
+		<a href="index.html">
+			<img width= "70" height="70"src="media/logo.png" alt="logo.png">
+		</a>
+		<div class="logoinstagram">
+			<img width="30" height="30"src="media/Instagram.png" alt="Instagram.png">
+		</div>
+
+		<nav>
+			<ul>
+				<li> <a id="navv" href ="pedionline.html">PEDÍ ONLINE</a></li>
+				<li> <a id="navv" href="menu.html">MENU</a></li>
+				<li> <a id="navv" href="aboutus.html">ABOUT US</a></li>
+				<li class= "page"> <a id="navv" href="opina.html">OPINÁ</a></li>
+			</ul>
+
+		</nav>
+
+	</header>
+	<body>	
+		<div class="parallax">
+			<h2 class="parallaxinfo">Tu opinión es la que cuenta!</h2>
+		</div>
+		<section class="opinasection">
+			<form action="indexdesafio_submit" method="get" accept-charset="utf-8">
+				<div class="form-group">
+					<label for="nombre">Nombre completo:</label>
+					<input type="nombre" name="nombre">
+				</div>
+				<br>
+				<br>
+				<div class="form-group">
+					<label for="mail">Mail:</label>
+					<input type="mail" name="mail" placeholder="nombre@gmail.com">
+				</div>
+				<br>
+				<br>
+				<div class="form-group">
+					<fieldset>
+						<legend>¿Cuántas veces visitaste Pescadito?</legend>
+						<div>1 vez
+							<input type="radio" name="visitas" value="1">
+						</div>
+						<div>Más de 2 veces
+							<input type="radio" name="visitas" value="2">
+						</div>
+						<div>Soy cliente frecuente
+							<input type="radio" name="visitas" value="frecuente">
+						</div>
+					</fieldset>
+				</div>
+				<br>
+				<br>
+
+				<label for="satisfaccion">Del 1 al 5, ¿cómo nos puntuarías?</label>
+				<select name="puntaje">
+					<option name="0"></option>
+					<option name="1">1</option>
+					<option name="2">2</option>
+					<option name="3">3</option>
+					<option name="4">4</option>
+					<option name="5">5</option>
+				</select>
+				<br>
+				<br>
+				<legend>Contanos tu experiencia!</legend>
+				<textarea name="experiencia" rows="5" cols="20"></textarea>
+				<br>
+				<button type="submit" class="btn btn-primary">Enviar</button>
+				<button type="reset" class="btn btn-primary">Limpiar formulario</button>
+			</form>
+		</section>
+
+		<footer id="footera">
+			<div class="footerleft">
+				<img width="30" height="30"src="media/Instagram.png" alt="Instagram.png">
+				<a href="https://www.instagram.com/pescaditocdm/">PESCADITOCDM</a>
+			</div>
+
+			<div class="footerright">
+				<img width="30" height="30"src="media/Maps.png" alt="Maps.png">
+				<a href="https://turismo.buenosaires.gob.ar/es/otros-establecimientos/patio-de-los-lecheros">PATIO DE LOS LECHEROS</a>
+			</div>
+		</footer>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+	</body>
+</div>
+</html>

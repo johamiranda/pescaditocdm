@@ -1,0 +1,39 @@
+/*OPINA*/
+
+.parallax {
+	min-height: calc(60vh - 85px - 50px);
+	width: 100%;
+	background-image: url(../media/patio1.png);
+	background-size: cover;
+	background-position: center;
+	display: table;
+	background-attachment: fixed;
+}
+
+.parallaxinfo {
+	font-family: 'League Script', cursive;
+	text-align: center;
+	color: white;
+	top: 40%;
+	width: 100%;
+	font-size: 85px;
+	text-shadow: 5px 5px 50px #ccc;
+	padding: 2rem;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.opinasection {
+	text-align: center;
+	font-size: 18px;
+	padding: 5rem;
+}
+
+fieldset {
+	border-style: hidden;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+}
