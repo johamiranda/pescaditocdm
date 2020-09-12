@@ -12,10 +12,16 @@ html {
 
 .contenedor {
 	width: 100%;
-	min-height: 100vh;
 	margin: auto;
 	padding: 0px;
 }
+
+@media (max-width: 500px) {
+	.contenedor {
+		min-height: 0;
+	}
+}
+
 
 
 

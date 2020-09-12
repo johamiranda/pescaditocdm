@@ -1,9 +1,17 @@
 /*PEDI ONLINE*/
-
-#glovo {
-	min-height: calc(100vh - 85px - 50px);
+.pedionline-contenido {
+	height: calc(100vh - 86px - 50px);
 	overflow: auto;
+}
+
+.pedionline-contenido img {
+	height: 100%;
+	margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+	.pedionline-contenido img {
+	height: auto;
 	width: 100%;
-	display: flex;
-	justify-content: center;
+}
 }

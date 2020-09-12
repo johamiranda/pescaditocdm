@@ -2,54 +2,71 @@
 	position: relative;
 	width: 100%;
 	margin: auto; 
+	background-color: #F5F5F5;
 	background-size: cover;
 	background-position: center;
-	height: calc(100vh - 85px - 50px);
-	overflow: auto;
-	animation: banner 10s infinite;
-	animation-direction: alternate;
+	height: calc(100vh - 86px - 50px);
+	transition: all .1s ease-in-out;
+	background-image: url(../media/banner1.jpg);
+	animation: banner 21s infinite linear;
 }
+
+.banner-content {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background-color: rgba(0, 22, 40, .2);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-content h1 {
+	font-size: 100px;
+	text-align: center;
+	font-family: $firstfont;
+	text-shadow:5px 5px 10px #010101; 
+}
+
 
 @keyframes banner {
-	0%, 30% {
+	0%{
 		background-image: url(../media/banner1.jpg);
-		opacity: 1;
 	}
-	31%, 34% {
-		opacity: 0.1;
+	34%{
+		background-image: url(../media/banner1.jpg);
 	}
-	35%, 65% {
-		background-image: url(../media/banner2.jpg);
-		opacity: 1;
+	35%{
+		background-image: url(../media/banner2.png);
 	}
-	66%, 69% {
-		opacity: 0.1;
+	69%{
+		background-image: url(../media/banner2.png);
 	}
-	70%, 100% {
-		background-image: url(../media/banner3.jpg);
-		opacity: 1;
+	70%{
+		background-image: url(../media/banner3.png);
+	}
+	100%{
+		background-image: url(../media/banner3.png);
 	}
 }
 
-.banner:before {
-	content: "";
-	position: absolute;
-	background-color: #000;
-	opacity: 0.3;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+@media (max-width: 1300px) {
+	.banner-content h1 {
+		font-size: 80px;
+	}
 }
 
-.bannerinfo {
-	font-family: "Notable";
-	text-align: center;
-	color: white;
-	font-size: 55px;
-	position: absolute;
-	top: 25%;
-	width: 100%;
-	text-shadow:5px 5px 10px #010101; 
-	
-}
+@media (max-width: 767px) {
+	.banner-content h1 {
+			font-size: 55px;
+
+}}
+
+@media (max-height: 500px) {
+	.banner-content h1 {
+			font-size: 35px;
+
+}}

@@ -1,39 +1,96 @@
 /*OPINA*/
 
+.opina-contenido {
+	height: calc(100vh - 86px - 50px);
+	overflow: auto;
+}
+
 .parallax {
-	min-height: calc(60vh - 85px - 50px);
 	width: 100%;
 	background-image: url(../media/patio1.png);
 	background-size: cover;
 	background-position: center;
-	display: table;
 	background-attachment: fixed;
+	position: relative;
+	height: 43vh;
+	min-height: 300px;
+}
+
+@media (max-width: 1000px) {
+	.parallax {
+		height: 35vh;		
+	}
 }
 
 .parallaxinfo {
-	font-family: 'League Script', cursive;
+	font-family: $thirdfont;
+	position: absolute;
 	text-align: center;
 	color: white;
-	top: 40%;
-	width: 100%;
-	font-size: 85px;
-	text-shadow: 5px 5px 50px #ccc;
-	padding: 2rem;
-	display: table-cell;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 65px;
+	text-shadow:5px 5px 10px $negro; 
 	vertical-align: middle;
+	line-height: 1.4;
 }
 
-.opinasection {
+.formulario {
+	width: 500px;
+	margin: auto;
+	border-radius: 25px;
+	padding: 15px;
+	margin-top: 20px;
 	text-align: center;
-	font-size: 18px;
-	padding: 5rem;
-}
-
-fieldset {
-	border-style: hidden;
-}
-
-body {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+	& > * {
+		margin-bottom: 10px;
+	}	
+	& > *:last-child {
+		margin-bottom: 0;
+	}	
+	input, textarea {
+		border: 2px solid #333333;
+		padding: 10px;
+		color: #333333;
+	}
+	textarea {
+		min-height: 200px;
+	}
+	button {
+		padding: 15px 30px;
+		color: $blanco;
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: #333333;
+		transition: all ease .3s;
+		border: none;
+		border-radius: 3px;
+		&:hover {
+			background-color: #AB5783;
+		}
+	}
+	::-webkit-input-placeholder { /* Edge */
+		color: #333333;
+	}
+
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: #333333;
+	}
+
+	::placeholder {
+		color: #333333;
+	}
 }
+
+@media (max-width: 767px) {
+	.parallaxinfo {
+		width: 80%;
+		font-size: 45px;}
+		.formulario {
+			width: 100%;}
+
+		}
